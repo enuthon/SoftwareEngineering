@@ -1,0 +1,38 @@
+General Non-Functional Requirements:
+-	Each individual has no more than one unique identifier, called “Crownpass ID” in the sequel, and a Crownpass holder can be checked physically to be the right person, say, through matching a photo of the pass holder
+-	This Crownpass ID will be independent to any other personal identifications like passport, driving license, or any other travel documents
+-	The Crownpass ID will have: a Photo of the pass holder, a 2D barcode as the Pass holder’s Crownpass ID, the colour code of infection state, the colour code of vaccination
+-	Three states of infection: Green (no infection), Amber (Suspected of infection), Red (Confirmed infection)
+-	Three states of vaccination: White (unvaccinated), Light Blue (first dose of vaccine completed), Dark blue (fully vaccinated)
+-	The application should be available to download on your phone, regardless of operating system
+-	Coherent and  flexible system, with HCI considerations 
+-	Accessibility
+-	Robustness – should be thoroughly tested 
+-	Supportability – contact information should be included so any customers with queries can contact developers
+-	Aesthetically pleasing for customer’s optimum experience
+
+General Functional Requirements:
+-	A computer application to enable tracking people who are in controlled areas and notifying people automatically for self-isolation
+-	The system is also required to record and maintain vaccination states for the Crownpass holders and to enable control of the accesses to public controlled areas according to their vaccine status
+-	It is therefore required to provide facilities to vaccine stations and centres so that the status of vaccines can be systematically recorded and managed efficiently.
+-	The system will collect and store the covid-19 infection and vaccination state for each pass holder and automate the state transitions in real-time when information becomes available due to Covid-19 virus test, self-isolation finishes, or vaccination.
+-	The state of Covid-19 infection and vaccination are retrieved from computers running on the cloud quickly. Three states of infection have been identified:
+-	An owner of a controlled area should be able to easily install a mobile APP to scan the 2D barcode of Crownpass when a person enters the area and leaves the area.
+-	APP should include: The length of the trace-back period may change when the advice from the domain experts are updated, The lengths of the overlap may change when the advice from the domain experts are updated, The length of the isolation may change when the advice from the domain experts are updated.
+-	The system should provide the Disease Control Centres of local and central governments with statistical data in a geographic area of the total number and percentage in the population of confirmed cases of Covid-19 infections, suspected infections, persons in isolation, the first dose vaccinations performed, the second dose performed, etc.
+-	A disease control centre is responsible to monitor the state of Covid-19 epidemic in a geographic area, which is called a disease control region, which can be a town, a city, a district, a county, etc
+-	The system must provide disease control centres with real-time accurate data so that a regional lockdown decision can be made promptly based on accurate data. 
+-	The system should provide facilities to support the staff members of vaccine stations for recording the vaccinations of Crownpass holders so that their vaccination states can be changed immediately. 
+
+Types of Users:
+
+(1)	Crownpass holder. They are individuals of the general public who want to enter and leave controlled areas by showing their Crownpass to the area staff. They may have different digital literacy and experiences of using smart mobile devices such as mobile phones. Some may have no mobile phones; and some may be unable to use mobile phones for some reason, such as disability. 
+(2)	Owner of controlled area. They are the owner or host of a controlled area and are responsible for setting up the operations of the area in compliance to the social distancing and virus tracking rules. It is assumed that they have a basic digital literacy and are capable of using smart mobile devices, such as mobile phones. It is also assumed that they own smart mobile devices on which a Mobile App can run. 
+(3)	Operation staff of a controlled area. They are in charge of operating a controlled area to ensure people entering the area are checked-in and leaving the area are checked-out so that their period of stays in the area can be correctly recorded, and only people in the green state will enter the area. It is assumed that they have a basic digital literacy and are capable of using smart mobile devices, such as mobile phones, to complete simple routine works. They should be able to learn how to use a mobile App quickly with or without lengthy training. 
+(4)	 Staff of Covid-19 Virus Test Centres. They are responsible for entering correct test results into the system when the test results for a Crownpass holder become available. It is assumed that they have a basic digital literacy and are capable of using smart mobile devices, such as mobile phones, to complete simple routine works. They should be able to learn how to use a mobile App quickly with a short training.
+(5)	Staff of Disease Control Centres. They are interested in monitoring the situation of Covid-19 infections in an area or a country by using statistical data. Informed by accurate and real-time data, they may make decisions to change system parameters and social distancing and virus tracking rules. It is assumed that they have good digital literacy and are capable of operating desktop computer systems through web-browsers and other graphic user interfaces after short training. 
+(6)	Managers of Vaccination Stations/Centres: They are individuals in charge of the management of vaccine stations and/or vaccine centres. They may have variant digital literacy and experiences of using desktop computers and/or mobile devices. They will be provided either a desktop computer and/or a mobile device (such as iPad and tablet computers) to perform the related tasks.  
+(7)	Operation Staff Members of Vaccine Stations/Centres: They are individuals working in the vaccine stations/centres and responsible for recording the vaccinations performed. They may have variant digital literacy and experiences of using mobile devices. They will be provided a mobile device (such as an iPad or a mobile phone) to perform the related tasks.  
+(8)	System Operators. They are responsible for setting the system parameters and other operations of the system. They are assumed to be IT professionals and capable of operating desktop computer systems after a short training. 
+
+
