@@ -35,4 +35,77 @@ Types of Users:
 (7)	Operation Staff Members of Vaccine Stations/Centres: They are individuals working in the vaccine stations/centres and responsible for recording the vaccinations performed. They may have variant digital literacy and experiences of using mobile devices. They will be provided a mobile device (such as an iPad or a mobile phone) to perform the related tasks.  
 (8)	System Operators. They are responsible for setting the system parameters and other operations of the system. They are assumed to be IT professionals and capable of operating desktop computer systems after a short training. 
 
+Quality Requirements:
+5.1	Scalability. 
+QR-SC-01: Crownpass Holder. The system must be able to provide services to around 40 million Crownpass holders nationally, who will register at the beginning period when the system rolls out (predicted to be 80% in the first 2 weeks). 
+QR-SC-02: Controlled Area. The system must be able to provide services to around 5 million controlled areas nationally, who will register at the beginning period when the system rolls out (predicted to be 90% in the first 3 days) 
+QR-SC-03: Check-in and Check-out. The system should be able to provide services of check-in and check-out of controlled areas to the scale that the total numbers of check-ins and check-outs to controlled areas are predicted to be around 200 million per day during the weekends and holidays seasons, and around 100 million per day on other days. 
+QR-SC-04: Test Centre. The system should be able to provide services to staff of test centres to the scale that the total number of Test Centres is around 10,000 nationally, and on average about 20 staff members in each test centre. The setup operations for test centres will take place in the first 3 days when the system rolls out. The number of tests of viruses per day may increase from 200,000 to 500,000. 
+QR-SC-05: Disease Control Centre. The system should be able to provide services to all disease control centres of the country to the scale that the total number of disease control centres is around 50 nationally, and the number of staff in each centre ranges from 30 to 100 with an average of 60. The setup operations for disease centres will take place in the first 3 days when the system rolls out. The monitoring operations will be continuous, i.e. 24 hours day and 7 days a week for at least one year. 
+QR-SC-06: Vaccine Station. The system should be able to provide services to all vaccine stations of the country to the scale of the total number of vaccine stations is around 20,000 nationally. The numbers of staff in a vaccine station range between 20 to 200 and on average is around 50. The number of vaccinations may reach 100,000 per day in total nationally. 
+5.2	Performance
+The following quality requirements on response times to various types of operations are based on using mobile applications when the mobile device is connected to the internet via Wi-Fi to broadband networks. 
+QR-PF-01: Registration of Crownpass. The response time for each interactive operation in the process of registration for a Crownpass should be no more than 20 seconds. 
+QR-PF-02: Check-in. The response time for check-in a Crownpass holder into a controlled area should be no more than 3 seconds.  
+QR-PF-03: Check-out. The response time for check-out a Crownpass holder out of a controlled area should be no more than 10 seconds. 
+QR-PF-04: Change Pass State to Red. The time that a Crownpass’ state is changed into RED should be no more than 1 second after the Crownpass holder’s virus test result being positive is entered into the system. 
+QR-PF-05: Change Pass State to Amber. The time that a Crownpass’ state is changed into Amber should be no more than 5 seconds after a Crownpass holder’s virus test result being positive entered into the system. 
+QR-PF-06: Change Pass State to Green. The time that a Crownpass’ state is changed into Green should be no more than 5 seconds after the pass holder’s virus test result being negative is entered into the system. 
+QR-PF-07: Notification of State Change. The notification of the state change to a Crownpass holder should be sent out within 10 seconds after the state change takes place, if the notification is required. 
+QR-PF-08: Setup Controlled Area. The response time for each interactive operation in the process of setting up a controlled area should be no more than 10 seconds. 
+QR-PF-09: Notification to Controlled Area. When notifying a controlled area for the existence of a Red pass holder in the area should be sent out no more than 1 second once a pass state is changed into RED state. 
+QR-PF-10: Setting up a Test Centre. The response time for each operation in the process of setting up the mobile application for a staff of a test centre should be no more than 5 seconds. 
+QR-PF-11: Enter Test Result. The response time for the operation of entering a test result to the system should be no more than 5 seconds. 
+QR-PF-12: Setup vaccination station. The response time of each operation in the process of setting up a vaccination station should be no more than 5 seconds. 
+QR-PF-13: Enter vaccination data. The response time for each operation in the process of entering vaccination data should be no more than 3 seconds. 
+QR-PF-14: View State of Controlled Area. The response time for viewing the data of a controlled area should be no more than 3 seconds. 
+The following performance requirements are based on assumptions that the desktop computers used by the staff in a disease control centre are connected to the internet via a fibre broadband computer network. 
+QR-PF-15: Setup Disease Control Monitoring System. The response time of each operation in the process of setting up the computer system of a disease control centre should be no more than 10 seconds. 
+QR-PF-16: Update Monitoring Data. The response time (i.e. the latency) for updating the statistical data for a disease control centre should be no more than 1 second. 
+5.3	Reliability
+QR-RE-01: Cloud Availability. The services provided by the system running on the cloud should be available 24 hours a day and 7 days a week with a yearly accumulated downtime no more than 10 hours including for planned maintenance and unplanned failures. 
+QR-RE-02: Cloud Meantime to Recovery. The services provided by the system running on the cloud should be able to recover quickly from failures with a mean-time-to-recover less than 1 hour over the period of 1 calendar year. 
+QR-RE-03: Cloud Meantime to Failure. The services provided by the system running on the cloud should not fail frequently with a mean time to failure greater than 1000 hours in a period of one calendar year. 
+QR-RE-04: Mobile Apps Failure Rate. For each mobile App on each platform and for each type of users, the failure rate should be lower than 0.3% per use. 
+QR-RE-05: Disease Control Centre Availability. The computer systems used by a Disease Control Centre should be able to operate continuously 24 hours a day and 7 days a week all year round with a failure rate lower than 100 hours per year in any consecutive operation period of one calendar year.
+QR-RE-06: Disease Control Centre Meantime to Failure. The computer systems used by a Disease Control Centre should not fail frequently. Its mean time to failure should be greater than 720 hours in any operation period of one calendar year. 
+QR-RE-07:  Disease Control Centre Meantime to Recover. The computer systems used by a Disease Control Centre should be able to recover quickly with a meantime to recover less than 2 hours in any operation period of one calendar year. 
+QR-RE-08: Functional Error Rate. Error to perform various functions of the system should be lower than the following error rates according to the types of functions.
+(1)	Crownpass registration: The failure rate to prevent own multiple passes should be less than 0.001%;
+(2)	Check-in with fake Crownpass: The failure rate to prevent a person from checking-in to a controlled area using other people’s pass (excluding self-check-in) should be less than 0.005%. 
+(3)	Check-in/Check-out error: The failure rate to record the correct data of entering and leaving a controlled area should be lower than 0.002%. 
+(4)	Entering Test Result and vaccination data: The failure rate to enter the test results and vaccination data to the system should be lower than 0.0001%. 
+(5)	Update Crownpass state: The failure rate to update Crownpass states should be lower than 0.0001%. 
+(6)	Update statistical data: The failure rate to update statistical data should be lower than 0.0%. 
+(7)	Report incidents: The failure rate for correctly recording the incidents reported by a police officer should lower than 0.01%. 
+QR-RE-09: Accuracy of statistical data.  The precision of statistical data is 2 decimal points and the data should be accurate to the true state of the system within 10 minutes. 
+5.4	Security and Privacy Protection
+In general, the system must comply with the European law of General Data Protection Regulation (GDPR) [1]. The following gives the details of the requirements on security and data protection requirements on the system. 
+QR-SE-01: Individual User Data Privacy Protection. The access to data of Crownpass holders are restricted to the following rules. No other uses of the data are allowed. 
+(a)	The following elements of a Crownpass holder’s data are private and can only be accessed for both viewing and modification by the user of the Crownpass holder: 
+a.	Name and address, 
+b.	Contact details, 
+c.	The times and dates of entering and leaving controlled areas,
+(b)	The Crownpass holder can view the virus test results and vaccination data and the state of the pass of his/her own, but not modify these data. 
+(c)	The registered photos of a Crownpass pass holder and the state of the pass should be viewed by the operation staff of controlled areas through scanning the QR code of the Crownpass in order to authenticate the person when using the Crownpass to enter a controlled area. 
+(d)	The user’s data can be viewed and modified by the system operation staff when managing Crownpass accounts as requested by a Crownpass holder and restricted to access only the part of relevant data. 
+QR-SE-02: Statistical Data Protection. The generation and uses of statistical data from the users’ individual data must follow the rules below. 
+(a)	The results of statistical calculation and analysis can only be presented to registered disease control centres as requested and limited to the statistical data of the geographic region set for the disease control centre to monitor. 
+(b)	The results of statistical calculations and analysis of the states of Crownpasses for a period of time and in a geographic region and pass holders’ presences in controlled areas must be presented after removing the identities of Crownpass holders. 
+QR-SE-03: Controlled Area Data Protection. The data associated with any controlled area must be protected according to the following rules. 
+(a)	The data of the numbers of Crownpass holders’ presences in a specific controlled area at any given time should only be viewed by the owner of the controlled area and police officers. 
+(b)	The registration data of a controlled area is regarded as public information and thus not protected for viewing, but the data can only be modified by the owner of the controlled area.
+QR-SE-04: User Authentication. The uses of the system must be authenticated according to the following rules. 
+(a)	The system should prevent a person from owning more than one Crownpass. 
+(b)	A Crownpass holder check-in to a controlled area using a Crownpass must be authenticated to be the true owner on the pass. 
+(c)	The user who uses a mobile App for any given type of users must be authenticated to be the true user of the mobile devices. 
+5.5	Platform Compatibility
+QR-PC-01: Mobile Apps Platform.  The mobile App for each type of users must be available for top 5 smart mobile phone operating systems (including different versions), and top 10 makes and models. 
+QR-PC-02: Desktop/Web-based Application Platform. The desktop/web-based computer systems for a disease control centre, test centre and vaccination management should be available for the Windows, Mac and Linux operating systems and compatible with Chrome, Firefox and Safari web browsers. 
+5.6	Usability
+QR-US-01: Mobile Apps GUI. For each user type, the mobile app should provide a graphic user interface and a short operation procedure with no more than three steps for users to use the mobile application. The HCI design of the mobile apps should have the following properties. 
+(1)	The user interface and operation procedure of each mobile app running on different platforms should be recognisably identical. 
+(2)	The user interface should comply with the accessibility standard [2]. 
+(3)	The user interface should adapt to the screen size automatically. 
+QR-US-02: Online Helps. For each user type, online help should be provided in the form of video clips shown how to use the systems in various scenarios. 
 
